@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <span class="h3">Резюме junior-java developer</span>
+                    <span class="h3" th:utext="#{title}"></span>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -49,13 +49,14 @@
 
             <div class="dropdown">
                 <a class="btn btn-light" role="button" id="dropdownLanguageLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Язык <i class="fa fa-language" aria-hidden="true"></i></i>
+                    <span th:utext="#{lang.change}"></span>
+                    <i class="fa fa-language" aria-hidden="true"></i></i>
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownLanguageLink">
                     <div class="btn-group mx-1">
-                        <a type="button" class="btn btn-light" href="/en">ENG</a>
-                        <a type="button" class="btn btn-light" href="/ru">РУС</a>
+                        <a type="button" class="btn btn-light" href="/?lang=en" th:utext="#{lang.eng}"></a>
+                        <a type="button" class="btn btn-light" href="/?lang=rus" th:utext="#{lang.rus}"></a>
                     </div>
                     <!--<a class="btn btn-light mx-1" type="button">-->
                     <!--<i class="fa fa-file-pdf-o" aria-hidden="true"> </i> PDF</a>-->
@@ -66,7 +67,8 @@
 
             <div class="dropdown">
                 <a class="btn btn-light" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Скачать <i class="fa fa-download" aria-hidden="true"></i>
+                    <span th:utext="#{header.download}"></span>
+                    <i class="fa fa-download" aria-hidden="true"></i>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
