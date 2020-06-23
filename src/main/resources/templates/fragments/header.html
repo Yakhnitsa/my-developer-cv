@@ -15,10 +15,6 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <span class="h3" th:utext="#{title}"></span>
-                </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="navbar-toggler-icon"></span>
@@ -26,25 +22,36 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                            Контакты</a>
+                            <span th:utext="#{header.menu.contact}"></span>
+                        </a>
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-laptop" aria-hidden="true"></i>
-                            Ключевые навыки</a>
+                            <span th:utext="#{header.menu.skills}"></span>
+                        </a>
                         <a class="dropdown-item" href="#">
-
-                            Опыт работы</a>
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                            <span th:utext="#{header.menu.experience}"></span>
+                        </a>
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            Образование</a>
+                            <span th:utext="#{header.menu.education}"></span>
+                        </a>
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            Личные качества</a>
+                            <span th:utext="#{header.menu.personal.qualities}"></span>
+                        </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" th:href="${githubLink}">
                             <i class="fa fa-github" aria-hidden="true"></i>
-                            Просмотр кода на github</a>
+                            <span th:utext="#{header.menu.github.link}"></span>
+                        </a>
                     </div>
                 </li>
+                <li class="nav-item active">
+                    <span class="h3" th:utext="#{title}"></span>
+                </li>
+
+
             </ul>
 
             <div class="dropdown">
